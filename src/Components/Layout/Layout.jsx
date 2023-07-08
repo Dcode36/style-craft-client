@@ -22,7 +22,7 @@ export default function Layout({ children, title, description, keywords, author 
                 <Toaster />
                 {children}
             </main>
-            <div className="space"></div>
+
             <Footer />
         </>
     )

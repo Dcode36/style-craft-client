@@ -27,7 +27,8 @@ import ProductDetails from './Pages/ProductDetails'
 import Categories from './Pages/Categories'
 import CategoryProduct from './Pages/CategoryProduct'
 import CartPage from './Pages/CartPage'
-
+import ReturnAndExchange from './Pages/ReturnAndExchange';
+import ShippingPolicy from './Pages/ShippingPolicy';
 
 export default function App() {
   AOS.init();
@@ -65,6 +66,8 @@ export default function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/policy' element={<Policy />} />
+        <Route path='/return-and-exchange' element={<ReturnAndExchange/>}/>
+        <Route path='/shipping-policy' element={<ShippingPolicy/>}/>
         <Route path='/*' element={<PageNotFound />} />
       </Routes>
 

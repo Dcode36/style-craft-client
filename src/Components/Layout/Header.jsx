@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/auth';
 import toast from 'react-hot-toast'
 import SeachInput from "../Form/SeachInput";
 import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
-
+import logo from '../Layout/logo.png'
 export default function Header() {
     const [auth, setAuth] = useAuth();
     const categories = useCategory();
@@ -17,13 +17,34 @@ export default function Header() {
         localStorage.removeItem('auth')
         toast.success("Logout Successfull")
     }
+    const [isScrolled, setIsScrolled] = useState(false);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.pageYOffset;
+
+            // Check if the page is scrolledjkl.zcx 
+            if (scrollTop > 0) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        // Add event listener to scroll event
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
         <>
-            <nav className="navbar  fixed-top px-lg-5 px-2" >
+            <nav className={` ${isScrolled ? 'header-scrolled' : 'header-transparent'} navbar fixed-top px-lg-5 px-2`} >
                 <div className="container-fluid">
 
-                    <a className="navbar-brand  fw-bold b-logo logo" href="/" >88*</a>
+                    <a className="navbar-brand  fw-bold b-logo  " href="/" ><img src={logo} alt="logoimg" className="stylecraft-logo" /></a>
                     <div className="menu-navigation d-flex align-items-center">
                         {
                             !auth?.user ? (<>

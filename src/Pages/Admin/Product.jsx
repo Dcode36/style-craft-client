@@ -6,7 +6,7 @@ import toast from 'react-hot-toast'
 import { Link } from 'react-router-dom'
 import Footer from '../../Components/Layout/Footer'
 export default function Product() {
-
+ 
     const [products, setProducts] = useState([]);
 
     const getAllProducts = async () => {

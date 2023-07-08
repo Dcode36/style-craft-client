@@ -4,8 +4,7 @@ import axios from 'axios'
 import { useParams, useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
 import { useCart } from "../context/cart";
-import { Collapse } from 'antd';
-const { Panel } = Collapse;
+
 export default function ProductDetails() {
     const navigate = useNavigate();
     const [cart, setCart] = useCart();
@@ -50,18 +49,14 @@ export default function ProductDetails() {
                                 <img src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${product._id}`} alt={product.name} type="button" data-bs-toggle="modal" data-bs-target="#productMoel" />
                             </div>
                             <div className="product-data">
-                                <div className="mx-4   data" data-aos="fade-up">
+                                <div className="  data" data-aos="fade-up">
                                     <h1 className='fw-bold my-2'>{product.name}</ h1>
                                     <h3 className='py-2'>Rs. {product.price}</ h3>
-                                    <p className='text-primary'>Free Delivery</p>
+        <hr />
+        <p>{product.description}</p>
 
-
-                                    <Collapse defaultActiveKey={['1']} >
-                                        <Panel header="Description" className='f bg-light' key="1">
-                                            <p>{product.description}</p>
-                                        </Panel>
-                                    </Collapse>
-
+                               
+<hr />
                                     {/* <p><b>Category: </b>{product.category.name}</p> */}
                                     <p className='py-2 graycolor fw-light'><b className='text-dark my-2 fw-bold'>Wash Care</b> <br />
                                         <br />
@@ -74,6 +69,7 @@ export default function ProductDetails() {
                                         DO NOT DRY CLEAN <br />
 
                                         TUMBLE DRY LOW</p>
+                                        <hr />
                                     <div className="buttons d-flex justify-content-centr flex-column">
                                         <button className='add-to-cart my-2'
                                             onClick={() => {
@@ -136,12 +132,12 @@ export default function ProductDetails() {
                     </div>
                 </div>
                 <div className="modal fade" id="productMoel" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog modal-xl  modal-fullscreen-sm-down" data-bs-dismiss="modal" aria-label="Close"  >
-                        <div className="modal-content">
+                    <div className="modal-dialog modal-xl  modal-fullscreen-sm-down " data-bs-dismiss="modal" aria-label="Close"  >
+                        <div className="modal-content ">
 
                             
 
-                                <img src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${product._id}`} className="card-img-top " alt={product.name} />
+                                <img src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${product._id}`} className="rounded card-img-top " alt={product.name} />
 
                            
 

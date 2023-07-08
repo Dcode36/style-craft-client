@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, NavNavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../context/auth';
 import toast from 'react-hot-toast'
 export default function AdminMenu() {
@@ -15,7 +15,7 @@ export default function AdminMenu() {
         <>
             <div className="text-center admin-menu" >
                 <div className="space"></div>
-                <NavLink to="/"><h1 className='fs-1 text-white fw-bold px-4'>88* </h1></NavLink>
+                <NavLink to="/"><h1 className='fs-1 text-white fw-bold px-4'>Stylecraft </h1></NavLink>
                 <NavLink className='text-white fs-1 fw-bold' to="/dashboard/admin">Admin Panel</NavLink>
          
                 <ul class="list-group mb-5 p-4">
