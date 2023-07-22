@@ -105,7 +105,7 @@ export default function HomePage() {
 
     return (
         <div>
-            <Layout title={"88* -Asthetic clothing brand"}>
+            <Layout title={"Stylecraft -Asthetic clothing brand"}>
 
                 <div className="main">
                     <div className="homepage bg-primary text-white flex-column">

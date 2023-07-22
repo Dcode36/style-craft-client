@@ -51,7 +51,7 @@ export default function Footer() {
         </div>
         <hr />
         <div className="rights py-3">
-              <h6 className="text-center fw-light">© 2023 88*</h6>
+              <h6 className="text-center fw-light">© 2023 Stylecraft</h6>
         </div>
       </div>
     </>

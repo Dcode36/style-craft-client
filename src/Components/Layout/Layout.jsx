@@ -30,9 +30,9 @@ export default function Layout({ children, title, description, keywords, author 
 
 
 Layout.defaultProps = {
-    title: '88*',
+    title: 'Stylecraft',
     description: 'Asthetic clothing Brand',
     keywords: 't-shirst, asthetic, branded, new look, ',
-    author: '88*'
+    author: 'Stylecraft'
 
 }
