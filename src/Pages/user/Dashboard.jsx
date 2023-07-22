@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../../Components/Layout/Layout'
 import UserMenu from '../../Components/Layout/UserMenu'
 import { useAuth } from '../../context/auth';
-import Profile from './Profile';
 export default function Dashboard() {
     const [auth] = useAuth();
     return (

@@ -3,7 +3,7 @@ import Layout from '../../Components/Layout/Layout'
 import UserMenu from '../../Components/Layout/UserMenu'
 import { useAuth } from '../../context/auth';
 export default function Order() {
-    const [auth, setAuth] = useAuth();
+    const [auth] = useAuth();
     return (
         <div>
             <Layout title={"Orders"}>

@@ -9,7 +9,7 @@ import logo from '../Layout/logo.png'
 export default function Header() {
     const [auth, setAuth] = useAuth();
     const categories = useCategory();
-    const [cart, setCart] = useCart();
+    const [cart] = useCart();
     const handleLogout = () => {
         setAuth({
             ...auth, user: null, token: ""

@@ -20,7 +20,7 @@ export default function Profile() {
 
 
     useEffect(() => {
-        const { name, email, password, phone, address, pincode } = auth.user;
+        const { name, email, phone, address } = auth.user;
         setName(name);
         setPhone(phone);
         setEmail(email);

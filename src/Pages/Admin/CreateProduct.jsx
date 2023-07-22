@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Layout from '../../Components/Layout/Layout'
 import AdminMenu from '../../Components/Layout/AdminMenu';
 import toast from 'react-hot-toast';
 import axios from 'axios';
@@ -15,7 +14,7 @@ export default function CreateProduct() {
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
     const [quantitiy, setQuantity] = useState("");
-    const [shipping, setShipping] = useState("");
+    const [setShipping] = useState("");
 
     const navigate = useNavigate();
     const getAllCategory = async () => {

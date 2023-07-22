@@ -8,7 +8,7 @@ import toast from 'react-hot-toast'
 export default function SearchPage() {
     const navigate = useNavigate();
     const [cart, setCart] = useCart();
-    const [values, setValues] = useSearch();
+    const [values] = useSearch();
     return (
         <Layout title={"Search Results"}>
             <div className="space"></div>

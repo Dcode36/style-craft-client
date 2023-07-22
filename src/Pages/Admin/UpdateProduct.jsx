@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Layout from '../../Components/Layout/Layout'
 import AdminMenu from '../../Components/Layout/AdminMenu';
 import toast from 'react-hot-toast';
 import axios from 'axios';
@@ -31,7 +30,6 @@ export default function UpdateProduct() {
             setName(data.product.name);
             setId(data.product._id);
             setDescription(data.product.description);
-            setPrice(data.product.price);
             setPrice(data.product.price);
             setQuantity(data.product.quantity);
             setShipping(data.product.shipping);
