@@ -29,8 +29,10 @@ import CategoryProduct from './Pages/CategoryProduct'
 import CartPage from './Pages/CartPage'
 import ReturnAndExchange from './Pages/ReturnAndExchange';
 import ShippingPolicy from './Pages/ShippingPolicy';
-
+import { useAuth } from './context/auth';
 export default function App() {
+  const [auth] = useAuth();
+  console.log("AUTH", auth)
   AOS.init();
   return (
     <>
@@ -47,17 +49,17 @@ export default function App() {
           <Route path="user" element={<Dashboard />} />
           <Route path="user/profile" element={<Profile />} />
           <Route path="user/orders" element={<Order />} />
-          
+
 
         </Route>
 
-        <Route path="/dashboard" element={<AdRoute/>}>
-            <Route path="admin" element={<AdminDashboard/>}/>
-            <Route path="admin/create-categray" element={<CreateCategory/>}/>
-            <Route path="admin/create-product" element={<CreateProduct/>}/>
-            <Route path="admin/product/:slug" element={<UpdateProduct/>}/>
-            <Route path="admin/products" element={<Product/>}/>
-            <Route path="admin/users" element={<Users/>}/>
+        <Route path="/dashboard" element={<AdRoute />}>
+          <Route path="admin" element={<AdminDashboard />} />
+          <Route path="admin/create-categray" element={<CreateCategory />} />
+          <Route path="admin/create-product" element={<CreateProduct />} />
+          <Route path="admin/product/:slug" element={<UpdateProduct />} />
+          <Route path="admin/products" element={<Product />} />
+          <Route path="admin/users" element={<Users />} />
 
         </Route>
         <Route path='/register' element={<Register />} />
@@ -66,8 +68,8 @@ export default function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/policy' element={<Policy />} />
-        <Route path='/return-and-exchange' element={<ReturnAndExchange/>}/>
-        <Route path='/shipping-policy' element={<ShippingPolicy/>}/>
+        <Route path='/return-and-exchange' element={<ReturnAndExchange />} />
+        <Route path='/shipping-policy' element={<ShippingPolicy />} />
         <Route path='/*' element={<PageNotFound />} />
       </Routes>
 
